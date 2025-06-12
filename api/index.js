@@ -9,16 +9,8 @@ const blogRoutes = require('../routes/blogRoutes');
 const authRoutes = require("../routes/authRoutes");
 
 const app = express();
-app.use(cors({
-  origin: [
-    "https://hameau-des-jeunes-frontend-dsjv.vercel.app",
-    "http://localhost:5174"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true
-}));
 
-app.options("*", cors());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
