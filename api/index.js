@@ -10,7 +10,10 @@ const authRoutes = require("../routes/authRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5174/","https://hameau-des-jeunes-frontend-dsjv.vercel.app/"], // add your actual frontend here
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
