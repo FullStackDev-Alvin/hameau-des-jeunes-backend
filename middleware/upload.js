@@ -9,8 +9,7 @@ const storage = new CloudinaryStorage({
     allowed_formats: ['jpg', 'jpeg', 'png', 'gif'],
     transformation: [{ width: 800, crop: 'limit' }],
   },
+  limits: { fileSize: 10 * 1024 * 1024 },
 });
-
-const parser = multer({ storage });
 
 module.exports = parser;
