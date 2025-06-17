@@ -7,7 +7,7 @@ router.post('/upload', parser.array('images', 20), imageController.uploadImages)
 router.delete('/:id', imageController.deleteImage);
 router.get('/', imageController.getAllImages);
 router.get('/category/:category', imageController.getImagesByCategory);
-router.delete('/all', imageController.deleteAllImages);
+router.delete('/images/all', imageController.deleteAllImages);
 
 
 module.exports = router;
